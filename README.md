@@ -1,28 +1,254 @@
-# Portfolio Website
+# Portfolio Website – Benedict Boamah Elikem
 
-A simple personal portfolio website with a homepage and CV page.
+> A modern, responsive portfolio showcasing an aspiring Product Designer's work, experience, and skills. Built with clean HTML, CSS, and vanilla JavaScript—no frameworks required.
 
-## Files
+---
 
-- `index.html` — main portfolio landing page
-- `cv.html` — curriculum vitae page
-- `styles.css` — shared styling for the site
-- `script.js` — interactive JavaScript behavior
+## About This Portfolio
 
-## Run locally
+This is the personal portfolio website of **Benedict Boamah Elikem**, an aspiring Product Designer based in **Accra, Ghana**. The site demonstrates:
 
-You can open the HTML files directly in a browser, or serve the project locally:
+- **Product thinking** – Understanding users and solving real problems
+- **Visual craft** – Design fundamentals in graphic design and UX
+- **Technical curiosity** – Front-end development with HTML, CSS, JavaScript, and React
 
+The portfolio highlights:
+- **Experience** in IT support, customer service, and graphic design
+- **Skills** in UX design, AI tools, and front-end development
+- **Education** at the University of Ghana (BSc Information Technology, expected 2028)
+- **Projects** including an AI application with user flow testing
+
+---
+
+## ✨ Features
+
+✓ **Fully responsive** – Beautiful on mobile, tablet, and desktop  
+✓ **Modern design** – Clean typography, warm color palette, smooth interactions  
+✓ **Accessibility-first** – WCAG 2.1 compliant, semantic HTML, keyboard navigation  
+✓ **Fast & lightweight** – No dependencies, pure HTML/CSS/JS  
+✓ **Mobile menu** – Adaptive navigation with hamburger toggle  
+✓ **Contact form** – Client-side validation with user feedback  
+✓ **Smooth animations** – CSS transitions and scroll behavior  
+✓ **Dark mode support** – Respects user's system preference (can be extended)  
+
+---
+
+## 📁 Project Structure
+
+```
+Portofolio Website/
+├── index.html          # Main portfolio landing page
+├── cv.html             # Curriculum vitae (CV/resume page)
+├── styles.css          # Complete site styling (single file)
+├── script.js           # Interactive JavaScript (menu, form validation)
+├── images/
+│   └── profile picture.png   # Benedict's professional photo
+└── README.md           # This file
+```
+
+---
+
+## 🚀 Getting Started
+
+### Option 1: Open Directly in Browser
+Simply double-click `index.html` to open it in your default browser.
+
+### Option 2: Serve Locally (Recommended)
+
+#### Using Python 3:
 ```bash
 python -m http.server 8000
 ```
 
-Then visit:
+#### Using Python 2:
+```bash
+python -m SimpleHTTPServer 8000
+```
 
-```text
+#### Using Node.js with `http-server`:
+```bash
+npx http-server
+```
+
+#### Using PHP:
+```bash
+php -S localhost:8000
+```
+
+Then open your browser and visit:
+```
 http://localhost:8000
 ```
 
-## Notes
+---
 
-This is a lightweight static website for showcasing portfolio content and resume information.
+## 🎨 Design Highlights
+
+### Color Palette
+- **Primary accent**: Warm orange/rust (`#d87854`) for CTAs and highlights
+- **Background**: Warm beige (`#f4f0e8`)
+- **Text**: Deep teal (`#18302e`)
+- **Muted**: Soft gray (`#64716d`)
+- **Surfaces**: White with subtle borders
+
+### Typography
+- **Display fonts**: Space Grotesk (modern, geometric)
+- **Body text**: DM Sans (readable, clean)
+- **Font sizes**: Fluid scaling with CSS `clamp()`
+
+### Responsive Breakpoints
+- **Desktop**: 1180px max container width
+- **Tablet**: Adjusted 2-column grids collapse to 1-column
+- **Mobile**: Full-width, hamburger menu, optimized touch targets
+
+---
+
+## 📄 Sections Overview
+
+### 1. **Home / Hero**
+- Large headline with accent color
+- Professional photo with decorative orbit frames
+- Call-to-action buttons
+- Key descriptors (product thinking, visual craft, technical curiosity)
+
+### 2. **About Me**
+- Background and current role
+- Highlight stats (years of experience, graduation year, location)
+- Foundation for understanding Benedict's journey
+
+### 3. **Experience**
+- Two key roles:
+  - **IT Support Assistant** (Dec 2023–Present) at ERASEL Digital Hub
+  - **Administrative Assistant** (Sep–Dec 2023) at OLIVES Mall
+- Role tags highlighting key skills learned
+
+### 4. **Projects**
+- Three projects showcasing design thinking:
+  - **AI Application** (completed) – User flow testing and problem solving
+  - **Mobile App Redesign** (coming soon)
+  - **User Flow Study** (in progress)
+
+### 5. **Skills & Certifications**
+- **Design skills**: Graphic design, UX thinking, problem solving, AI tools
+- **Technical skills**: HTML, CSS, JavaScript, React, Python, Node.js
+- **Certifications**: AI literacy, prompt engineering, Python developer, critical infrastructure protection
+
+### 6. **Education**
+- Current: BSc Information Technology (University of Ghana, 2028)
+- Previous: WASSCE General Science (2023)
+
+### 7. **Contact**
+- Direct contact details (email, phone, LinkedIn)
+- Fully functional contact form with:
+  - Real-time validation
+  - Accessible form fields
+  - User-friendly error messages
+  - Success confirmation
+
+### 8. **Footer**
+- Copyright year (auto-updated)
+- Back-to-top link
+
+---
+
+## 🛠️ Customization
+
+### Update Personal Information
+Edit `index.html` to replace:
+- Name and headline
+- Photo path: `images/profile picture.png`
+- Email: `boamahbenedictelikem@gmail.com`
+- Phone: `+233594630626`
+- LinkedIn: `linkedin.com/in/boamahelikem/`
+- About text, experience, projects, skills, education
+
+### Modify Colors
+Edit CSS variables in `styles.css`:
+```css
+:root {
+  --bg: #f4f0e8;         /* Main background */
+  --text: #18302e;       /* Text color */
+  --accent: #d87854;     /* Highlight/CTA color */
+  --muted: #64716d;      /* Secondary text */
+  --teal: #3f8179;       /* Alternative accent */
+  --max: 1180px;         /* Max container width */
+}
+```
+
+### Change Fonts
+Replace Google Fonts imports in `index.html` `<head>` with your preferred typeface.
+
+### Disable Animations
+For users who prefer reduced motion, the CSS already respects `prefers-reduced-motion`. To fully disable animations, remove or comment out the `@keyframes` rules.
+
+---
+
+## 🌐 Technologies Used
+
+- **HTML5** – Semantic markup, accessibility attributes
+- **CSS3** – CSS Grid, Flexbox, CSS custom properties, media queries
+- **JavaScript (Vanilla)** – Menu toggle, form validation, year auto-update
+- **Google Fonts** – Space Grotesk, DM Sans typefaces
+- **No dependencies** – Works offline, no build process required
+
+---
+
+## ♿ Accessibility
+
+This portfolio is built with accessibility in mind:
+
+- ✓ Semantic HTML (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`)
+- ✓ ARIA labels and roles for interactive elements
+- ✓ Keyboard navigation support (Tab, Enter, Esc)
+- ✓ Focus indicators (2px outline)
+- ✓ Color contrast meets WCAG AA standards
+- ✓ Respects `prefers-reduced-motion` media query
+- ✓ Form validation with accessible error messages
+- ✓ Image alt text for all content images
+
+---
+
+## 📱 Browser Support
+
+| Browser | Support | Notes |
+|---------|---------|-------|
+| Chrome | ✓ Full | Modern stable |
+| Firefox | ✓ Full | Modern stable |
+| Safari | ✓ Full | Version 14+ |
+| Edge | ✓ Full | Modern stable |
+| Mobile Safari (iOS) | ✓ Full | iOS 12+ |
+| Chrome Mobile | ✓ Full | Modern stable |
+
+---
+
+## 📝 License
+
+This portfolio is personal work. Feel free to use it as inspiration for your own portfolio, but please don't directly copy all content and rebrand as your own.
+
+---
+
+## 🤝 Support & Feedback
+
+Have suggestions for improvements? Reach out to Benedict:
+
+- **Email**: boamahbenedictelikem@gmail.com
+- **LinkedIn**: [linkedin.com/in/boamahelikem](https://www.linkedin.com/in/boamahelikem/)
+- **Location**: Accra, Ghana
+
+---
+
+## 📊 Future Enhancements
+
+Potential improvements:
+- [ ] Add project case studies with images/mockups
+- [ ] Implement blog section for design thoughts
+- [ ] Add dark mode toggle
+- [ ] Integrate real email backend (Formspree, EmailJS, etc.)
+- [ ] Add animation library (AOS for scroll-triggered animations)
+- [ ] Implement smooth page transitions
+- [ ] Add project filtering by category
+- [ ] Create downloadable PDF resume
+
+---
+
+**Built with care by Benedict Boamah Elikem** – 2024
