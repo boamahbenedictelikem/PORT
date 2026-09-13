@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boamah Benedict Elikem | CV</title>
+    <style>
+        :root {
+            --primary: #214ab8;
+            --accent: #1d9d8b;
+            --text: #1a2438;
+            --muted: #53657b;
+            --bg: #f6f9ff;
+            --card: #ffffff;
+            --line: rgba(26, 36, 56, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .page {
+            max-width: 980px;
+            margin: 32px auto;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            box-shadow: 0 24px 60px rgba(26, 36, 56, 0.08);
+            padding: 40px 38px;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            border-bottom: 2px solid var(--line);
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            margin: 0 0 6px;
+            font-size: clamp(2rem, 2vw, 2.8rem);
+        }
+
+        .role {
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-size: 0.82rem;
+        }
+
+        .contact {
+            text-align: right;
+            font-size: 0.96rem;
+            color: var(--muted);
+        }
+
+        .summary {
+            margin-bottom: 24px;
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 28px;
+        }
+
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section h2 {
+            font-size: 1rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin: 0 0 10px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 6px;
+        }
+
+        .job {
+            margin-bottom: 16px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .job-header h3 {
+            margin: 0;
+            font-size: 1.08rem;
+        }
+
+        .job-company {
+            color: var(--muted);
+            font-weight: 600;
+            margin: 2px 0 6px;
+        }
+
+        .job ul {
+            margin: 8px 0 0 20px;
+            color: var(--muted);
+            padding: 0;
+        }
+
+        .right-col .meta {
+            display: grid;
+            gap: 12px;
+        }
+
+        .meta-box {
+            background: var(--bg);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 12px 14px;
+        }
+
+        .meta-box strong {
+            display: block;
+            font-size: 0.84rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .skills span {
+            background: #edf4ff;
+            color: var(--text);
+            border: 1px solid rgba(33, 74, 184, 0.12);
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 760px) {
+            .page {
+                padding: 24px 20px;
+                margin: 18px auto;
+            }
+
+            .top,
+            .grid {
+                display: block;
+            }
+
+            .contact {
+                text-align: left;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="top">
+            <div>
+                <div class="role">Aspiring Product Designer / Frontend Developer</div>
+                <h1>Boamah Benedict Elikem</h1>
+            </div>
+            <div class="contact">
+                <div>+233 594630626</div>
+                <div>boamahbenedictelikem@gmail.com</div>
+                <div>Accra, Ghana</div>
+                <div><a href="https://www.linkedin.com/in/boamahelikem/" target="_blank"
+                        rel="noreferrer">LinkedIn Profile</a></div>
+            </div>
+        </div>
+
+        <div class="summary">
+            Motivated and detail-oriented aspiring product designer with experience in IT support, customer service,
+            office administration, frontend development, and graphic design. Interested in creating clear, useful, and
+            accessible digital experiences through user-focused design and technology.
+        </div>
+
+        <div class="grid">
+            <main>
+                <div class="section">
+                    <h2>Experience</h2>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <h3>IT Support Assistant</h3>
+                            <span>Dec. 2023 — Present</span>
+                        </div>
+                        <div class="job-company">ERASEL Digital Hub | Accra, Ghana</div>
+                        <ul>
+                            <li>Coordinated daily office and IT support operations.</li>
+                            <li>Diagnosed and resolved basic hardware and software issues.</li>
+                            <li>Delivered technical assistance and customer support to clients.</li>
+                            <li>Managed inventory records and equipment.</li>
+                            <li>Processed customer transactions and reconciled daily cash balances.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <h3>Administrative Assistant</h3>
+                            <span>Sep. 2023 — Dec. 2023</span>
+                        </div>
+                        <div class="job-company">OLIVES Mall | Kasoa, Ghana</div>
+                        <ul>
+                            <li>Maintained accurate records through data entry and verification.</li>
+                            <li>Prepared reports and business documents using Microsoft Office.</li>
+                            <li>Reconciled cash drawers and processed daily bank deposits.</li>
+                            <li>Supported office administration and day-to-day operations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Education</h2>
+                    <div class="job">
+                        <div class="job-header">
+                            <h3>Bachelor of Science in Information Technology</h3>
+                            <span>October 2028</span>
+                        </div>
+                        <div class="job-company">University of Ghana</div>
+                    </div>
+                    <div class="job">
+                        <div class="job-header">
+                            <h3>WASSCE Certificate in General Science</h3>
+                            <span>September 2023</span>
+                        </div>
+                        <div class="job-company">Sogakofe Senior High</div>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="right-col">
+                <div class="section">
+                    <h2>Skills</h2>
+                    <div class="meta">
+                        <div class="meta-box">
+                            <strong>Technical</strong>
+                            <div class="skills">
+                                <span>Microsoft Office</span>
+                                <span>IT Support</span>
+                                <span>Data Entry</span>
+                                <span>Customer Service</span>
+                            </div>
+                        </div>
+                        <div class="meta-box">
+                            <strong>Product Design</strong>
+                            <div class="skills">
+                                <span>User-centered design</span>
+                                <span>Wireframing</span>
+                                <span>Prototyping</span>
+                                <span>Visual design</span>
+                                <span>Design thinking</span>
+                                <span>Frontend development</span>
+                            </div>
+                        </div>
+                        <div class="meta-box">
+                            <strong>Creative</strong>
+                            <div class="skills">
+                                <span>Adobe Photoshop</span>
+                                <span>Illustrator</span>
+                                <span>Canva</span>
+                                <span>Graphic Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Certifications</h2>
+                    <div class="meta-box">
+                        <strong>Python Developer</strong>
+                        Sololearn — Dec. 2025
+                    </div>
+                    <div class="meta-box" style="margin-top: 10px;">
+                        <strong>Vibe Coding</strong>
+                        Sololearn — Nov. 2025
+                    </div>
+                    <div class="meta-box" style="margin-top: 10px;">
+                        <strong>ICIP</strong>
+                        Opswat Academy — Nov. 2026
+                    </div>
+                    <div class="meta-box" style="margin-top: 10px;">
+                        <strong>Microsoft Office</strong>
+                        ERASEL Computer Training Center — Jul. 2024
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>
