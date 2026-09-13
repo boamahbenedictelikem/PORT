@@ -34,7 +34,7 @@ if (contactForm) {
         input.setAttribute('aria-invalid', String(Boolean(message)));
     };
 
-    contactForm.addEventListener('submit', (event) => {
+    contactForm.addEventListener('submit', async (event) => {
         event.preventDefault();
         const formData = new FormData(contactForm);
         const email = String(formData.get('email')).trim();
@@ -60,12 +60,29 @@ if (contactForm) {
         submitButton.classList.add('is-loading');
         status.textContent = 'Sending your message...';
 
-        window.setTimeout(() => {
+        try {
+            const response = await fetch(contactForm.action, {
+                method: contactForm.method,
+                body: new FormData(contactForm),
+                headers: {
+                    Accept: 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Form submission failed.');
+            }
+
             submitButton.disabled = false;
             submitButton.classList.remove('is-loading');
-            status.textContent = 'Thanks, your message is ready to send. I will be in touch soon.';
+            status.textContent = 'Thanks, your message has been sent. I will be in touch soon.';
             status.classList.add('success');
             contactForm.reset();
-        }, 700);
+        } catch (error) {
+            submitButton.disabled = false;
+            submitButton.classList.remove('is-loading');
+            status.textContent = 'Something went wrong. Please try again or email me directly.';
+            status.classList.add('error');
+        }
     });
 }
