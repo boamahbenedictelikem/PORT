@@ -4,100 +4,188 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boamah Benedict Elikem | CV</title>
+    <meta name="description" content="Curriculum Vitae of Boamah Benedict Elikem — Product Designer, Front-End Developer & IT Support Specialist based in Accra, Ghana." />
+    <title>Boamah Benedict Elikem | Curriculum Vitae</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Open Graph & Social -->
+    <meta property="og:title" content="Boamah Benedict Elikem | Curriculum Vitae" />
+    <meta property="og:description" content="Curriculum Vitae of Boamah Benedict Elikem — Product Designer, Front-End Developer & IT Specialist." />
+    <meta property="og:image" content="https://benedictboamah.tech/profile-picture.png" />
+    <meta property="og:url" content="https://benedictboamah.tech/cv.html" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
     <style>
         :root {
-            --primary: #214ab8;
-            --accent: #1d9d8b;
-            --text: #1a2438;
-            --muted: #53657b;
-            --bg: #f6f9ff;
+            --primary: #d87854;
+            --primary-dark: #b85b37;
+            --accent: #3f8179;
+            --text: #18302e;
+            --muted: #5e6d69;
+            --bg: #f4f0e8;
             --card: #ffffff;
-            --line: rgba(26, 36, 56, 0.1);
+            --line: rgba(24, 48, 46, 0.14);
+            --pill-bg: #eaf1ef;
         }
 
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
-            font-family: "DM Sans", Arial, Helvetica, sans-serif;
+            font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
+            padding: 24px 16px 48px;
         }
 
-        .page {
+        /* Top Action Bar */
+        .action-bar {
             max-width: 980px;
-            margin: 32px auto;
+            margin: 0 auto 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 99px;
             background: var(--card);
             border: 1px solid var(--line);
-            border-radius: 20px;
-            box-shadow: 0 24px 60px rgba(26, 36, 56, 0.08);
-            padding: 40px 38px;
+            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        .print-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary);
+            color: #ffffff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 99px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(216, 120, 84, 0.25);
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .print-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Main CV Page */
+        .page {
+            max-width: 980px;
+            margin: 0 auto;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(24, 48, 46, 0.08);
+            padding: 44px 40px;
         }
 
         .top {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
+            gap: 24px;
             border-bottom: 2px solid var(--line);
-            padding-bottom: 20px;
+            padding-bottom: 24px;
             margin-bottom: 24px;
         }
 
         h1 {
-            font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+            font-family: "Space Grotesk", sans-serif;
             margin: 0 0 6px;
-            font-size: clamp(2rem, 2vw, 2.8rem);
+            font-size: clamp(2rem, 3vw, 2.7rem);
+            letter-spacing: -0.04em;
+            color: var(--text);
+            text-transform: uppercase;
         }
 
         .role {
             color: var(--primary);
             font-weight: 700;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            font-size: 0.82rem;
+            font-size: 0.85rem;
         }
 
         .contact {
             text-align: right;
-            font-size: 0.96rem;
+            font-size: 0.94rem;
             color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .contact a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
         }
 
         .summary {
-            margin-bottom: 24px;
-            color: var(--muted);
-            font-size: 1rem;
+            margin-bottom: 28px;
+            color: var(--text);
+            font-size: 1.02rem;
+            line-height: 1.65;
+            background: #faf8f5;
+            border-left: 3px solid var(--primary);
+            padding: 14px 18px;
+            border-radius: 0 10px 10px 0;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 28px;
+            grid-template-columns: 1.18fr 0.82fr;
+            gap: 36px;
         }
 
         .section {
-            margin-bottom: 24px;
+            margin-bottom: 26px;
         }
 
         .section h2 {
-            font-size: 1rem;
-            letter-spacing: 0.08em;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
             color: var(--primary);
-            margin: 0 0 10px;
-            border-bottom: 1px solid var(--line);
+            margin: 0 0 14px;
+            border-bottom: 1.5px solid var(--line);
             padding-bottom: 6px;
         }
 
         .job {
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .job-header {
@@ -110,65 +198,126 @@
 
         .job-header h3 {
             margin: 0;
-            font-size: 1.08rem;
+            font-size: 1.12rem;
+            color: var(--text);
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .job-date {
+            color: var(--primary);
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
         }
 
         .job-company {
-            color: var(--muted);
+            color: var(--accent);
             font-weight: 600;
-            margin: 2px 0 6px;
+            font-size: 0.92rem;
+            margin: 2px 0 8px;
         }
 
         .job ul {
             margin: 8px 0 0 20px;
             color: var(--muted);
+            font-size: 0.94rem;
             padding: 0;
+            display: grid;
+            gap: 4px;
         }
 
-        .right-col .meta {
+        .job ul li {
+            line-height: 1.55;
+        }
+
+        /* Right Column */
+        .meta {
             display: grid;
-            gap: 12px;
+            gap: 16px;
         }
 
         .meta-box {
-            background: var(--bg);
+            background: #faf8f5;
             border: 1px solid var(--line);
             border-radius: 12px;
-            padding: 12px 14px;
+            padding: 16px 18px;
         }
 
         .meta-box strong {
             display: block;
-            font-size: 0.84rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             color: var(--primary);
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+        }
+
+        .certification {
+            font-size: 0.92rem;
+            color: var(--text);
         }
 
         .certification + .certification {
-            margin-top: 10px;
+            margin-top: 12px;
+        }
+
+        .cert-date {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 2px;
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 7px;
             margin-top: 8px;
         }
 
         .skills span {
-            background: #edf4ff;
+            background: var(--card);
             color: var(--text);
-            border: 1px solid rgba(33, 74, 184, 0.12);
-            padding: 6px 10px;
+            border: 1px solid var(--line);
+            padding: 5px 11px;
             border-radius: 999px;
-            font-size: 0.88rem;
+            font-size: 0.84rem;
+            font-weight: 500;
         }
 
+        .soft-skills-list {
+            list-style: none;
+            display: grid;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .soft-skills-list li {
+            position: relative;
+            padding-left: 14px;
+            font-size: 0.92rem;
+            color: var(--muted);
+        }
+
+        .soft-skills-list li::before {
+            content: "§";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Print Media Styles */
         @media print {
             body {
                 background: #ffffff;
+                color: #000000;
+                padding: 0;
+            }
+
+            .action-bar {
+                display: none !important;
             }
 
             .page {
@@ -177,13 +326,33 @@
                 border: 0;
                 border-radius: 0;
                 box-shadow: none;
+                padding: 0;
+            }
+
+            .summary {
+                background: none;
+                border-left-color: #000;
+                padding: 8px 12px;
+            }
+
+            .meta-box {
+                background: none;
+                border-color: #ccc;
+            }
+
+            .skills span {
+                border-color: #ccc;
             }
         }
 
         @media (max-width: 760px) {
+            body {
+                padding: 16px 12px;
+            }
+
             .page {
-                padding: 24px 20px;
-                margin: 18px auto;
+                padding: 26px 20px;
+                border-radius: 14px;
             }
 
             .top,
@@ -193,43 +362,54 @@
 
             .contact {
                 text-align: left;
-                margin-top: 10px;
+                margin-top: 14px;
+            }
+
+            .right-col {
+                margin-top: 28px;
             }
         }
     </style>
 </head>
 
 <body>
+    <!-- Action Bar for Web Visitors -->
+    <div class="action-bar">
+        <a class="back-link" href="index.html">← Back to Portfolio</a>
+        <button class="print-btn" onclick="window.print()" type="button" title="Print or save as PDF">
+            <span>🖨️</span> Download / Print CV
+        </button>
+    </div>
+
     <div class="page">
         <div class="top">
             <div>
-                <div class="role">Aspiring Product Designer and Front-End Developer</div>
+                <div class="role">Product Designer · Front-End Developer · IT Specialist</div>
                 <h1>Boamah Benedict Elikem</h1>
             </div>
             <div class="contact">
-                <div>+233 594630626</div>
-                <div>boamahbenedictelikem@gmail.com</div>
                 <div>Accra, Ghana</div>
-                <div><a href="https://www.linkedin.com/in/boamahelikem/" target="_blank"
-                    rel="noopener noreferrer">LinkedIn Profile</a></div>
+                <div>+233 594630626</div>
+                <div><a href="mailto:boamahbenedictelikem@gmail.com">boamahbenedictelikem@gmail.com</a></div>
+                <div><a href="https://www.linkedin.com/in/boamahelikem/" target="_blank" rel="noopener noreferrer">linkedin.com/in/boamahelikem ↗</a></div>
+                <div><a href="https://benedictboamah.tech" target="_blank" rel="noopener noreferrer">benedictboamah.tech ↗</a></div>
             </div>
         </div>
 
         <div class="summary">
-            Motivated and detail-oriented aspiring product designer with experience in IT support, customer service,
-            office administration, front-end development, and graphic design. I am interested in creating clear, useful, and
-            accessible digital experiences through user-focused design and technology.
+            <strong>PROFESSIONAL SUMMARY:</strong> Motivated and detail-oriented professional with proficiency in Microsoft Office Suite, foundational knowledge in Programming (Python, Java, PHP, CSS, C++, JavaScript, HTML, React, Node.js), Customer service, and Graphic design. I aim to make meaningful contributions while continuously enhancing my technical expertise and interpersonal skills.
         </div>
 
         <div class="grid">
             <main>
+                <!-- Professional Experience -->
                 <div class="section">
-                    <h2>Experience</h2>
+                    <h2>Professional Experience</h2>
 
                     <div class="job">
                         <div class="job-header">
                             <h3>IT Support Assistant</h3>
-                            <span>Dec. 2023 — Present</span>
+                            <span class="job-date">Dec. 2023 – Present</span>
                         </div>
                         <div class="job-company">ERASEL Digital Hub | Accra, Ghana</div>
                         <ul>
@@ -244,31 +424,63 @@
                     <div class="job">
                         <div class="job-header">
                             <h3>Administrative Assistant</h3>
-                            <span>Sep. 2023 — Dec. 2023</span>
+                            <span class="job-date">Sep. 2023 – Dec. 2023</span>
                         </div>
                         <div class="job-company">OLIVES Mall | Kasoa, Ghana</div>
                         <ul>
-                            <li>Maintained accurate records through data entry and verification.</li>
+                            <li>Maintained accurate business records through timely data entry and verification.</li>
+                            <li>Supported daily office administration and document management.</li>
                             <li>Prepared reports and business documents using Microsoft Office.</li>
-                            <li>Reconciled cash drawers and processed daily bank deposits.</li>
-                            <li>Supported office administration and day-to-day operations.</li>
+                            <li>Reconciled cash drawers and prepared daily bank deposits.</li>
+                            <li>Assisted staff in maintaining efficient day to day operations.</li>
                         </ul>
                     </div>
                 </div>
 
+                <!-- Projects Section -->
+                <div class="section">
+                    <h2>Projects</h2>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <h3>AI Application Development</h3>
+                            <span class="job-date">Independent Project</span>
+                        </div>
+                        <div class="job-company">Google AI Studio · Prompt Flow · Testing</div>
+                        <ul>
+                            <li>Developed a functional application using Google AI Studio through prompt-based development and testing.</li>
+                            <li>Streamlined interaction flows, structured AI output cards, and tested user queries for clarity.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <h3>DCIT 209: E-Commerce Architecture &amp; Prototype</h3>
+                            <span class="job-date">University of Ghana · DCIT 209</span>
+                        </div>
+                        <div class="job-company">HTML5 · External CSS3 · Responsive Design · E-Business Architecture</div>
+                        <ul>
+                            <li>Modeled a 5-page responsive e-commerce platform meeting strict academic criteria: zero inline styles, multi-browser compatibility (Chrome, Edge), and 1024x768 horizontal scroll-free viewing.</li>
+                            <li>Engineered accessibility features for disabled users, on-page search, responsive media navigation (horizontal-to-vertical menu), and multimedia background video integration.</li>
+                            <li>Authored an e-business analytical report evaluating SWOT/PESTLE frameworks, supply chain logistics, SSL encryption, and PCI DSS payment security compliance.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
                 <div class="section">
                     <h2>Education</h2>
                     <div class="job">
                         <div class="job-header">
-                            <h3>Bachelor of Science in Information Technology</h3>
-                            <span>Expected October 2028</span>
+                            <h3>Bachelor Of Science in Information Technology</h3>
+                            <span class="job-date">October 2028 (Expected)</span>
                         </div>
-                        <div class="job-company">University of Ghana</div>
+                        <div class="job-company">University of Ghana | Legon, Accra</div>
                     </div>
                     <div class="job">
                         <div class="job-header">
-                            <h3>WASSCE, General Science</h3>
-                            <span>September 2023</span>
+                            <h3>WASSCE Certificate in General Science</h3>
+                            <span class="job-date">September 2023</span>
                         </div>
                         <div class="job-company">Sogakofe Senior High</div>
                     </div>
@@ -276,58 +488,87 @@
             </main>
 
             <aside class="right-col">
+                <!-- Technical Skills -->
                 <div class="section">
-                    <h2>Skills</h2>
+                    <h2>Technical Skills</h2>
                     <div class="meta">
                         <div class="meta-box">
-                            <strong>Technical</strong>
+                            <strong>Office &amp; Support</strong>
                             <div class="skills">
-                                <span>Microsoft Office</span>
-                                <span>IT Support</span>
+                                <span>Microsoft Office Suite (Word, Excel, PowerPoint, Access, Outlook)</span>
                                 <span>Data Entry</span>
+                                <span>IT Troubleshooting</span>
                                 <span>Customer Service</span>
                             </div>
                         </div>
+
                         <div class="meta-box">
-                            <strong>Product Design</strong>
+                            <strong>Programming &amp; Web (Basic)</strong>
                             <div class="skills">
-                                <span>User-centered design</span>
-                                <span>Wireframing</span>
-                                <span>Prototyping</span>
-                                <span>Visual design</span>
-                                <span>Design thinking</span>
-                                <span>Front-end development</span>
+                                <span>Python</span>
+                                <span>Java</span>
+                                <span>PHP</span>
+                                <span>CSS</span>
+                                <span>C++</span>
+                                <span>JavaScript</span>
+                                <span>HTML</span>
+                                <span>React</span>
+                                <span>Node.js</span>
                             </div>
                         </div>
+
                         <div class="meta-box">
-                            <strong>Creative</strong>
+                            <strong>Graphic Design</strong>
                             <div class="skills">
                                 <span>Adobe Photoshop</span>
-                                <span>Illustrator</span>
+                                <span>Adobe Illustrator</span>
                                 <span>Canva</span>
-                                <span>Graphic Design</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Soft Skills -->
+                <div class="section">
+                    <h2>Soft Skills</h2>
+                    <div class="meta-box">
+                        <ul class="soft-skills-list">
+                            <li>Good communication and interpersonal skills.</li>
+                            <li>Ability to work in a team and adaptability.</li>
+                            <li>Analytical and problem-solving skills.</li>
+                            <li>Time management and multitasking.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
                 <div class="section">
                     <h2>Certifications</h2>
-                    <div class="meta-box certification">
-                        <strong>Python Developer</strong>
-                        Sololearn — Dec. 2025
-                    </div>
-                    <div class="meta-box certification">
-                        <strong>Vibe Coding</strong>
-                        Sololearn — Nov. 2025
-                    </div>
-                    <div class="meta-box certification">
-                        <strong>ICIP</strong>
-                        OPSWAT Academy — Nov. 2026
-                    </div>
-                    <div class="meta-box certification">
-                        <strong>Microsoft Office</strong>
-                        ERASEL Computer Training Center — Jul. 2024
+                    <div class="meta-box">
+                        <div class="certification">
+                            <strong>SkillQuest - Generative AI Literacy</strong>
+                            <span class="cert-date">Simplilearn SkillUp · Sep. 2026 · Cert #64620223</span>
+                        </div>
+                        <div class="certification">
+                            <strong>Project Planning with AI</strong>
+                            <span class="cert-date">Sololearn · Nov. 2025 · ID: CC-QGRMLU7B</span>
+                        </div>
+                        <div class="certification">
+                            <strong>Python Developer / Intro to Python</strong>
+                            <span class="cert-date">Sololearn · Dec. 2025 / Jun. 2024</span>
+                        </div>
+                        <div class="certification">
+                            <strong>Vibe Coding</strong>
+                            <span class="cert-date">Sololearn · Nov. 2025</span>
+                        </div>
+                        <div class="certification">
+                            <strong>Introduction to Critical Infrastructure Protection (ICIP)</strong>
+                            <span class="cert-date">OPSWAT Academy · Nov. 2026 · ID: <a href="https://learn.opswatacademy.com/certificate/QEskspAuTA" target="_blank" rel="noopener noreferrer">QEskspAuTA ↗</a></span>
+                        </div>
+                        <div class="certification">
+                            <strong>Microsoft Office Suite Certification</strong>
+                            <span class="cert-date">ERASEL Computer Training Center · Jul. 2024</span>
+                        </div>
                     </div>
                 </div>
             </aside>
