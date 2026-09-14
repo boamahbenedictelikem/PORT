@@ -13,23 +13,28 @@ This is the personal portfolio website of **Benedict Boamah Elikem**, an aspirin
 - **Technical curiosity** – Front-end development with HTML, CSS, JavaScript, and React
 
 The portfolio highlights:
-- **Experience** in IT support, customer service, and graphic design
-- **Skills** in UX design, AI tools, and front-end development
+- **Experience** in IT support, customer service, and office administration
+- **Skills** in UX design, front-end development, and AI tools
 - **Education** at the University of Ghana (BSc Information Technology, expected 2028)
-- **Projects** including an AI application with user flow testing
+- **Projects** including:
+  - **DCIT 209: E-Commerce Architecture & Platform** (5-page responsive architecture modeled for University of Ghana coursework)
+  - **AI Application Development** (Generative AI prototype built with Google AI Studio)
+- **Verified Certifications** from Simplilearn, Sololearn, ERASEL, and OPSWAT Academy
 
 ---
 
 ## ✨ Features
 
-✓ **Fully responsive** – Beautiful on mobile, tablet, and desktop  
-✓ **Modern design** – Clean typography, warm color palette, smooth interactions  
-✓ **Accessibility-first** – WCAG 2.1 compliant, semantic HTML, keyboard navigation  
-✓ **Fast & lightweight** – No dependencies, pure HTML/CSS/JS  
-✓ **Mobile menu** – Adaptive navigation with hamburger toggle  
-✓ **Contact form** – Client-side validation with user feedback  
-✓ **Smooth animations** – CSS transitions and scroll behavior  
-✓ **Dark mode support** – Respects user's system preference (can be extended)  
+✓ **Fully responsive** – Optimized across mobile, tablet, and desktop (including 1024×768 resolution without horizontal scrolling)  
+✓ **Dark / Light mode switch** – Smooth theme toggling with system preference detection and `localStorage` persistence  
+✓ **Interactive case study modals** – In-depth project walkthroughs without page jumps  
+✓ **Accessibility-first** – WCAG 2.1 compliant, semantic HTML5 landmarks, keyboard navigation (`Escape` to close modals), screen reader support  
+✓ **Fast & lightweight** – Zero external runtime dependencies, 100% vanilla HTML, CSS, and JS  
+✓ **Synchronized CV page** – Styled curriculum vitae with quick "Back to Portfolio" navigation and print-to-PDF support  
+✓ **One-click Copy Email** – Animated toast notification feedback  
+✓ **Active scroll spy** – Smooth section highlighting in navigation as you scroll  
+✓ **SEO & Social Previews** – Open Graph, Twitter Cards, and custom branded SVG favicon  
+✓ **Contact form** – Connected to Formspree with client-side validation  
 
 ---
 
@@ -37,13 +42,14 @@ The portfolio highlights:
 
 ```
 Portofolio Website/
-├── index.html          # Main portfolio landing page
-├── cv.html             # Curriculum vitae (CV/resume page)
-├── styles.css          # Complete site styling (single file)
-├── script.js           # Interactive JavaScript (menu, form validation)
-├── images/
-│   └── profile picture.png   # Benedict's professional photo
-└── README.md           # This file
+├── index.html          # Main portfolio landing page & interactive case study modals
+├── cv.html             # Harmonized & printable Curriculum Vitae
+├── styles.css          # Unified design system & responsive layout
+├── script.js           # Theme switcher, scroll spy, modal controller & toast
+├── favicon.svg         # Branded vector monogram favicon
+├── profile-picture.png # Benedict's professional photo
+├── CNAME               # Custom domain config (benedictboamah.tech)
+└── README.md           # Project documentation
 ```
 
 ---
