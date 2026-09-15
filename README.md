@@ -1,20 +1,20 @@
 # Portfolio Website – Benedict Boamah Elikem
 
-> A high-performance, responsive portfolio showcasing professional IT solutions, software builds, technical systems support, and modern web architecture. Engineered with semantic HTML5, modern CSS3, and vanilla JavaScript—zero bloat, no external frameworks required.
+> A modern, responsive portfolio showcasing an Information Technology student's journey, practical experience, projects, and active exploration across the computing space. Built with clean HTML, CSS, and vanilla JavaScript—zero bloat, no external frameworks required.
 
 ---
 
 ## About This Portfolio
 
-This is the professional portfolio website of **Benedict Boamah Elikem**, an Information Technology Specialist and Web Developer based in **Accra, Ghana**. The site demonstrates:
+This is the personal portfolio website of **Benedict Boamah Elikem**, an Information Technology Student and Aspiring Technologist based in **Accra, Ghana**. The site demonstrates:
 
-- **Technical Systems & Infrastructure** – 2+ years of frontline IT support, hardware/software diagnostics, network troubleshooting, and systems administration
-- **Web & Software Engineering** – Modular architecture and clean implementations with HTML5, CSS3, JavaScript, React, and applied AI workflows
-- **Analytical & Operational Precision** – Structured problem-solving, WCAG accessibility compliance, enterprise security analysis, and high-integrity data management
+- **Technical Systems & IT Support** – 2+ years of hands-on IT support, hardware/software diagnostics, network troubleshooting, and systems administration
+- **Software & Web Exploration** – Practical development with HTML5, CSS3, JavaScript, React, Python, Java, and applied AI workflows
+- **Adaptability & Growth Mindset** – Actively exploring computing disciplines, dedicated to continuous learning, and solving real-world challenges
 
 The portfolio highlights:
-- **Professional Experience** in IT support, systems administration, and commercial operations
-- **Core Competencies** across operating systems, web engineering, and modern digital tools
+- **Hands-On Experience** in IT support, systems maintenance, and operational administration
+- **Core Competencies** across operating systems, software engineering fundamentals, and digital tools
 - **Education** at the University of Ghana (BSc Information Technology, expected 2028)
 - **Featured Projects**:
   - **DCIT 209: E-Commerce Platform Architecture** (5-page responsive architecture modeled for University of Ghana coursework)
