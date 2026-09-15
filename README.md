@@ -6,7 +6,7 @@
 
 ## About This Portfolio
 
-This is the personal portfolio website of **Benedict Boamah Elikem**, an Information Technology Student and Aspiring Technologist based in **Accra, Ghana**. The site demonstrates:
+This is the personal portfolio website of **Benedict Boamah Elikem**, a Technology Explorer and Digital Problem Solver based in **Accra, Ghana**. The site demonstrates:
 
 - **Technical Systems & IT Support** – 2+ years of hands-on IT support, hardware/software diagnostics, network troubleshooting, and systems administration
 - **Software & Web Exploration** – Practical development with HTML5, CSS3, JavaScript, React, Python, Java, and applied AI workflows

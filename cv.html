@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Curriculum Vitae of Boamah Benedict Elikem — Information Technology Student &amp; Aspiring Technologist based in Accra, Ghana." />
+    <meta name="description" content="Curriculum Vitae of Boamah Benedict Elikem — Technology Explorer &amp; Digital Problem Solver based in Accra, Ghana." />
     <title>Benedict Boamah Elikem | Crafting the Future of Tech</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
     <!-- Open Graph & Social -->
-    <meta property="og:title" content="Boamah Benedict Elikem | Information Technology Student &amp; Aspiring Technologist" />
-    <meta property="og:description" content="Curriculum Vitae of Boamah Benedict Elikem — Information Technology Student &amp; Aspiring Technologist based in Accra, Ghana." />
+    <meta property="og:title" content="Boamah Benedict Elikem | Technology Explorer &amp; Digital Problem Solver" />
+    <meta property="og:description" content="Curriculum Vitae of Boamah Benedict Elikem — Technology Explorer &amp; Digital Problem Solver based in Accra, Ghana." />
     <meta property="og:image" content="https://benedictboamah.tech/profile-picture.png" />
     <meta property="og:url" content="https://benedictboamah.tech/cv.html" />
 
@@ -309,11 +309,20 @@
         }
 
         /* Print Media Styles */
+        @page {
+            size: A4;
+            margin: 9mm 10mm;
+        }
+
         @media print {
             body {
                 background: #ffffff;
                 color: #000000;
                 padding: 0;
+                font-size: 9.15pt;
+                line-height: 1.32;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
 
             .action-bar {
@@ -327,6 +336,123 @@
                 border-radius: 0;
                 box-shadow: none;
                 padding: 0;
+                /* Keeps the full CV within two A4 pages in Chromium print previews. */
+                zoom: 0.9;
+            }
+
+            .top {
+                gap: 14px;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+
+            h1 {
+                font-size: 22pt;
+                margin-bottom: 2px;
+            }
+
+            .role,
+            .contact {
+                font-size: 8.3pt;
+            }
+
+            .summary {
+                margin-bottom: 12px;
+                font-size: 8.8pt;
+                line-height: 1.35;
+            }
+
+            .grid {
+                gap: 18px;
+            }
+
+            .section {
+                margin-bottom: 13px;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .section h2 {
+                font-size: 9.4pt;
+                margin-bottom: 7px;
+                padding-bottom: 3px;
+            }
+
+            .job {
+                margin-bottom: 9px;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .job-header {
+                gap: 8px;
+            }
+
+            .job-header h3 {
+                font-size: 9.4pt;
+            }
+
+            .job-date,
+            .job-company {
+                font-size: 8pt;
+            }
+
+            .job-company {
+                margin: 1px 0 3px;
+            }
+
+            .job ul {
+                margin: 3px 0 0 13px;
+                font-size: 8.25pt;
+                gap: 1px;
+            }
+
+            .job ul li {
+                line-height: 1.27;
+            }
+
+            .meta {
+                gap: 7px;
+            }
+
+            .meta-box {
+                padding: 8px 9px;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .meta-box strong {
+                font-size: 7.7pt;
+                margin-bottom: 4px;
+            }
+
+            .skills {
+                gap: 3px;
+                margin-top: 3px;
+            }
+
+            .skills span {
+                padding: 2px 5px;
+                font-size: 7.35pt;
+            }
+
+            .soft-skills-list {
+                gap: 2px;
+                margin-top: 3px;
+            }
+
+            .soft-skills-list li,
+            .certification {
+                font-size: 8pt;
+            }
+
+            .certification + .certification {
+                margin-top: 5px;
+            }
+
+            .cert-date {
+                font-size: 7.3pt;
+                margin-top: 0;
             }
 
             .summary {
@@ -384,7 +510,7 @@
     <div class="page">
         <div class="top">
             <div>
-                <div class="role">Information Technology Student · Aspiring Technologist</div>
+                <div class="role">Technology Explorer · Digital Problem Solver</div>
                 <h1>Boamah Benedict Elikem</h1>
             </div>
             <div class="contact">
