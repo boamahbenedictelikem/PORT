@@ -1,4 +1,4 @@
-# Portfolio Website – Benedict Boamah Elikem
+# Benedict Boamah Elikem | Crafting the Future of Tech
 
 > A modern, responsive portfolio showcasing an Information Technology student's journey, practical experience, projects, and active exploration across the computing space. Built with clean HTML, CSS, and vanilla JavaScript—zero bloat, no external frameworks required.
 
