@@ -57,18 +57,38 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
 
 // 3. Mobile Navigation Menu
 if (menuToggle && nav) {
-    menuToggle.addEventListener('click', () => {
+    const closeNav = () => {
+        nav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        const sr = menuToggle.querySelector('.sr-only');
+        if (sr) sr.textContent = 'Open menu';
+    };
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         const isOpen = nav.classList.toggle('is-open');
         menuToggle.setAttribute('aria-expanded', String(isOpen));
-        menuToggle.querySelector('.sr-only').textContent = isOpen ? 'Close menu' : 'Open menu';
+        const sr = menuToggle.querySelector('.sr-only');
+        if (sr) sr.textContent = isOpen ? 'Close menu' : 'Open menu';
     });
 
     nav.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('is-open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            menuToggle.querySelector('.sr-only').textContent = 'Open menu';
-        });
+        link.addEventListener('click', closeNav);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (nav.classList.contains('is-open') && !nav.contains(e.target) && !menuToggle.contains(e.target)) {
+            closeNav();
+        }
+    });
+
+    // Close menu on Escape key
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+            closeNav();
+            menuToggle.focus();
+        }
     });
 }
 
@@ -109,6 +129,10 @@ const openModal = (modalKey) => {
 
     modalBody.innerHTML = '';
     modalBody.appendChild(template.content.cloneNode(true));
+    const titleEl = modalBody.querySelector('h2');
+    if (titleEl) {
+        titleEl.id = 'modal-title';
+    }
     modalOverlay.classList.add('is-active');
     modalOverlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -184,20 +208,31 @@ const showToast = (message) => {
 if (copyEmailBtn) {
     const emailToCopy = 'boamahbenedictelikem@gmail.com';
     copyEmailBtn.addEventListener('click', async () => {
-        try {
-            if (navigator.clipboard && navigator.clipboard.writeText) {
+        let copied = false;
+        if (navigator.clipboard && window.isSecureContext) {
+            try {
                 await navigator.clipboard.writeText(emailToCopy);
-            } else {
-                // Fallback for older browsers
+                copied = true;
+            } catch (_) {
+                copied = false;
+            }
+        }
+        if (!copied) {
+            try {
                 const textarea = document.createElement('textarea');
                 textarea.value = emailToCopy;
                 textarea.style.position = 'fixed';
                 textarea.style.opacity = '0';
                 document.body.appendChild(textarea);
                 textarea.select();
-                document.execCommand('copy');
+                copied = document.execCommand('copy');
                 document.body.removeChild(textarea);
+            } catch (_) {
+                copied = false;
             }
+        }
+
+        if (copied) {
             showToast('Email copied to clipboard!');
             const label = copyEmailBtn.querySelector('.copy-label');
             if (label) {
@@ -207,8 +242,8 @@ if (copyEmailBtn) {
                     label.textContent = originalText;
                 }, 2000);
             }
-        } catch (err) {
-            showToast('Unable to copy. Email: ' + emailToCopy);
+        } else {
+            showToast('Email: ' + emailToCopy);
         }
     });
 }
@@ -241,6 +276,24 @@ if (contactForm) {
         }
         input.setAttribute('aria-invalid', String(Boolean(message)));
     };
+
+    // Clear field errors as user types
+    fields.forEach((field) => {
+        const input = contactForm.elements[field];
+        if (input) {
+            input.addEventListener('input', () => {
+                const row = input.closest('.form-row');
+                if (row && row.classList.contains('has-error')) {
+                    setFieldError(field, '');
+                    const status = document.querySelector('#form-status');
+                    if (status && status.classList.contains('error')) {
+                        status.textContent = '';
+                        status.className = 'form-status';
+                    }
+                }
+            });
+        }
+    });
 
     contactForm.addEventListener('submit', async (event) => {
         event.preventDefault();

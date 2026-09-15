@@ -1,24 +1,24 @@
 # Portfolio Website – Benedict Boamah Elikem
 
-> A modern, responsive portfolio showcasing an aspiring Product Designer's work, experience, and skills. Built with clean HTML, CSS, and vanilla JavaScript—no frameworks required.
+> A high-performance, responsive portfolio showcasing professional IT solutions, software builds, technical systems support, and modern web architecture. Engineered with semantic HTML5, modern CSS3, and vanilla JavaScript—zero bloat, no external frameworks required.
 
 ---
 
 ## About This Portfolio
 
-This is the personal portfolio website of **Benedict Boamah Elikem**, an aspiring Product Designer based in **Accra, Ghana**. The site demonstrates:
+This is the professional portfolio website of **Benedict Boamah Elikem**, an Information Technology Specialist and Web Developer based in **Accra, Ghana**. The site demonstrates:
 
-- **Product thinking** – Understanding users and solving real problems
-- **Visual craft** – Design fundamentals in graphic design and UX
-- **Technical curiosity** – Front-end development with HTML, CSS, JavaScript, and React
+- **Technical Systems & Infrastructure** – 2+ years of frontline IT support, hardware/software diagnostics, network troubleshooting, and systems administration
+- **Web & Software Engineering** – Modular architecture and clean implementations with HTML5, CSS3, JavaScript, React, and applied AI workflows
+- **Analytical & Operational Precision** – Structured problem-solving, WCAG accessibility compliance, enterprise security analysis, and high-integrity data management
 
 The portfolio highlights:
-- **Experience** in IT support, customer service, and office administration
-- **Skills** in UX design, front-end development, and AI tools
+- **Professional Experience** in IT support, systems administration, and commercial operations
+- **Core Competencies** across operating systems, web engineering, and modern digital tools
 - **Education** at the University of Ghana (BSc Information Technology, expected 2028)
-- **Projects** including:
-  - **DCIT 209: E-Commerce Architecture & Platform** (5-page responsive architecture modeled for University of Ghana coursework)
-  - **AI Application Development** (Generative AI prototype built with Google AI Studio)
+- **Featured Projects**:
+  - **DCIT 209: E-Commerce Platform Architecture** (5-page responsive architecture modeled for University of Ghana coursework)
+  - **AI Application Prototype** (Interactive conversational AI prototype engineered with Google AI Studio)
 - **Verified Certifications** from Simplilearn, Sololearn, ERASEL, and OPSWAT Academy
 
 ---
@@ -31,10 +31,10 @@ The portfolio highlights:
 ✓ **Accessibility-first** – WCAG 2.1 compliant, semantic HTML5 landmarks, keyboard navigation (`Escape` to close modals), screen reader support  
 ✓ **Fast & lightweight** – Zero external runtime dependencies, 100% vanilla HTML, CSS, and JS  
 ✓ **Synchronized CV page** – Styled curriculum vitae with quick "Back to Portfolio" navigation and print-to-PDF support  
-✓ **One-click Copy Email** – Animated toast notification feedback  
+✓ **One-click Copy Email** – Resilient multi-layer clipboard copy with animated toast notification feedback  
 ✓ **Active scroll spy** – Smooth section highlighting in navigation as you scroll  
 ✓ **SEO & Social Previews** – Open Graph, Twitter Cards, and custom branded SVG favicon  
-✓ **Contact form** – Connected to Formspree with client-side validation  
+✓ **Contact form** – Connected to Formspree with real-time field validation  
 
 ---
 
@@ -46,6 +46,7 @@ Portofolio Website/
 ├── cv.html             # Harmonized & printable Curriculum Vitae
 ├── styles.css          # Unified design system & responsive layout
 ├── script.js           # Theme switcher, scroll spy, modal controller & toast
+├── server.js           # Lightweight local development server
 ├── favicon.svg         # Branded vector monogram favicon
 ├── profile-picture.png # Benedict's professional photo
 ├── CNAME               # Custom domain config (benedictboamah.tech)
@@ -56,18 +57,19 @@ Portofolio Website/
 
 ## 🚀 Getting Started
 
-### Option 1: Open Directly in Browser
+### Option 1: Run with Node.js (Recommended)
+```bash
+node server.js
+```
+Then navigate to `http://localhost:3000/`.
+
+### Option 2: Open Directly in Browser
 Simply double-click `index.html` to open it in your default browser.
 
-### Option 2: Serve Locally (Recommended)
-
-#### Using Python 3:
+### Option 3: Using Python
 ```bash
 python -m http.server 8000
 ```
-
-#### Using Python 2:
-```bash
 python -m SimpleHTTPServer 8000
 ```
 
